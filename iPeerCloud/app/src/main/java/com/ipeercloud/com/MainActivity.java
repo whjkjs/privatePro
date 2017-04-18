@@ -66,7 +66,6 @@ public class MainActivity extends BaseAcitivity {
         ViewUtils.inject(this);
         initView();
         initFragment();
-//        helloGoonas();
         String callString = helloGoonas();
         Log.e("返回了", "返回的字串：" + callString);
     }
@@ -205,35 +204,12 @@ public class MainActivity extends BaseAcitivity {
     public static native boolean gsOnline();
     public static native boolean gsLinkCloudServer(String CloudServerUuid);
 
-    static {
-//		System.loadLibrary("grudp");
-		System.loadLibrary("gcommonapi");
-		System.loadLibrary("gfile");
-        System.loadLibrary("gproxy");
-        System.loadLibrary("gsCloudServer");
-    }
+
 
     private void goToOnClick() {
-//        Log.e("测试", "into goToOnClick");
-//        final Integer argc = 8089;
-//        long backlong = GProxyInit("sz.goonas.com", argc, "2411309415@qq.com", "1818");
-//        Log.e("测试", "返回的字串  GProxyInit : " + backlong);
-
         boolean login = gsLogin("sz.goonas.com", "2411309415@qq.com", "1818");
         Log.e("测试", "返回的字串  gsLogin : " + login);
 
-
-//        boolean reset = gsResetPassword(GsConfig.serverip, "472596846@qq.com");
-//        Log.e("测试", "返回的字串  gsLogin : " + reset);
-
-//        new Thread(){
-//            @Override
-//            public void run() {
-//                super.run();
-//                boolean reset = gsresetPassword(GsConfig.serverip, "2411309415@qq.com");
-//                Log.e("测试", "返回的字串  gsLogin : " + reset);
-//            }
-//        }.start();
     }
 
 

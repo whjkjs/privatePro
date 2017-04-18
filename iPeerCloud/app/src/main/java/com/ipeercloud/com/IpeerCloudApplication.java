@@ -14,7 +14,13 @@ public class IpeerCloudApplication extends Application {
 
     private static IpeerCloudApplication instance;
     private static Stack<Activity> activityStack;
-
+    //加载so库
+    static {
+        System.loadLibrary("gcommonapi");
+        System.loadLibrary("gfile");
+        System.loadLibrary("gproxy");
+        System.loadLibrary("gsCloudServer");
+    }
     @Override
     public void onCreate() {
         super.onCreate();
