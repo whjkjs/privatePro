@@ -223,14 +223,14 @@ public class MainActivity extends BaseAcitivity {
         Log.e("测试", "返回的字串  gsLogin : " + login);
 
 
-//        boolean reset = gsResetPassword(Config.serverip, "472596846@qq.com");
+//        boolean reset = gsResetPassword(GsConfig.serverip, "472596846@qq.com");
 //        Log.e("测试", "返回的字串  gsLogin : " + reset);
 
 //        new Thread(){
 //            @Override
 //            public void run() {
 //                super.run();
-//                boolean reset = gsresetPassword(Config.serverip, "2411309415@qq.com");
+//                boolean reset = gsresetPassword(GsConfig.serverip, "2411309415@qq.com");
 //                Log.e("测试", "返回的字串  gsLogin : " + reset);
 //            }
 //        }.start();

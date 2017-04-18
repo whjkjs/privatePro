@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.ipeercloud.com.IpeerCloudApplication;
 import com.ipeercloud.com.MainActivity;
 import com.ipeercloud.com.R;
-import com.ipeercloud.com.utils.Config;
+import com.ipeercloud.com.utils.GsConfig;
 import com.ipeercloud.com.utils.Contants;
 import com.ipeercloud.com.utils.SharedPreferencesHelper;
 import com.lidroid.xutils.ViewUtils;
@@ -152,7 +152,7 @@ public class LoginAcitivity extends BaseAcitivity {
                             @Override
                             public void run() {
                                 super.run();
-                                boolean loginback = MainActivity.gsLogin(Config.serverip, emailStr, passwordStr);
+                                boolean loginback = MainActivity.gsLogin(GsConfig.serverip, emailStr, passwordStr);
                                 Message message = new Message();
                                 message.what = MSG_LOGIN;
                                 message.obj = loginback;
