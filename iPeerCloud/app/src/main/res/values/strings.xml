@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">iPeerCloud</string>
+    <string name="sign_up">注册</string>
+    <string name="log_in">登录</string>
+    <string name="welcome">返回</string>
+    <string name="newaccount">新账号</string>
+    <string name="create">创建</string>
+    <string name="emailorphone">邮箱/电话</string>
+    <string name="emailorphone_edt">请输入邮箱地址或电话</string>
+    <string name="Password">密码</string>
+    <string name="password">请输入密码</string>
+    <string name="tips_newaccount">请输入一个有效的电子邮件地址，这将是您找回密码的唯一凭证，请牢记.</string>
+    <string name="peercloud">PeerCloud</string>
+    <string name="forgetpassword">忘记密码</string>
+
+    <string name="recents">最新</string>
+    <string name="photos">照片</string>
+    <string name="medias">视频</string>
+    <string name="files">文件</string>
+    <string name="settings">设置</string>
+    <string name="search">搜索</string>
+
+    <string name="logonuser">用户名</string>
+    <string name="camerasync">相机同步</string>
+    <string name="off">关闭</string>
+    <string name="on">打开</string>
+    <string name="linkyourgoonas">连接你的私有云</string>
+    <string name="addnewinternet">添加新的连接</string>
+    <string name="ver">版本</string>
+    <string name="clearcaches">清除缓存</string>
+    <string name="invitefriends">邀请好友</string>
+    <string name="exitapp">退出登录</string>
+
+    <string name="msg_load_ing">加载中....</string>
+
+
+    <string name="changepassword">修改密码</string>
+    <string name="change">修改</string>
+    <string name="oldpassword">旧密码</string>
+    <string name="input_oldpassword">请输入旧密码</string>
+    <string name="newpassword">新密码</string>
+    <string name="input_newpassword">请输入新密码</string>
+    <string name="changetips">请输入您的旧密码和新密码，然后点击右上方的按钮</string>
+
+
+    <string name="link_cloud">连接你的私有云</string>
+    <string name="link">连接</string>
+    <string name="linked">已连接</string>
+    <string name="unlinked">未链接</string>
+    <string name="private_clould_uuid">私有云存储服务器的UUID号</string>
+    <string name="link_tips">连接到您的私有云存储服务器后，系统将自动同步相册、视频文件</string>
+
+
+    <string name="scan_code">扫描二维码</string>
+    <string name="enter_uuid">手动输入UUID</string>
+    <string name="cancel">取消</string>
+</resources>

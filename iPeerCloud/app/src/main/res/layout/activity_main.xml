@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#eeeeee"
+        android:layout_alignTop="@+id/main_bottom"
+        />
+
+    <!-- 选项栏 -->
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="3dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <!-- recents -->
+        <LinearLayout
+            android:onClick="onTabSelect"
+            android:id="@+id/rl_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+            <ImageView
+                android:id="@+id/btn_home"
+                android:layout_weight="2.5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:src="@drawable/tab_home_selector"
+                android:visibility="visible" />
+            <TextView
+                android:layout_weight="1.5"
+                android:id="@+id/tv_home"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center_horizontal"
+                android:scaleType="matrix"
+                android:text="@string/recents"
+                android:textColor="#989898"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- photos -->
+        <LinearLayout
+            android:onClick="onTabSelect"
+            android:id="@+id/rl_photos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+            <ImageView
+                android:id="@+id/btn_photos"
+                android:layout_weight="2.5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:src="@drawable/tab_photos_selector"
+                android:visibility="visible" />
+            <TextView
+                android:layout_weight="1.5"
+                android:id="@+id/tv_photos"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center_horizontal"
+                android:scaleType="matrix"
+                android:text="@string/photos"
+                android:textColor="#989898"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- medias -->
+        <LinearLayout
+            android:onClick="onTabSelect"
+            android:id="@+id/rl_medias"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+            <ImageView
+                android:id="@+id/btn_medias"
+                android:layout_weight="2.5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:src="@drawable/tab_medias_selector"
+                android:visibility="visible" />
+            <TextView
+                android:layout_weight="1.5"
+                android:id="@+id/tv_medias"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center_horizontal"
+                android:scaleType="matrix"
+                android:text="@string/medias"
+                android:textColor="#989898"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- files -->
+        <LinearLayout
+            android:onClick="onTabSelect"
+            android:id="@+id/rl_files"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+            <ImageView
+                android:id="@+id/btn_files"
+                android:layout_weight="2.5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:src="@drawable/tab_files_selector"
+                android:visibility="visible" />
+            <TextView
+                android:layout_weight="1.5"
+                android:id="@+id/tv_files"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center_horizontal"
+                android:scaleType="matrix"
+                android:text="@string/files"
+                android:textColor="#989898"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- settings -->
+        <LinearLayout
+            android:onClick="onTabSelect"
+            android:id="@+id/rl_settings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+            <ImageView
+                android:id="@+id/btn_settings"
+                android:layout_weight="2.5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:src="@drawable/tab_settings_selector"
+                android:visibility="visible" />
+            <TextView
+                android:layout_weight="1.5"
+                android:id="@+id/tv_settings"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center_horizontal"
+                android:scaleType="matrix"
+                android:text="@string/settings"
+                android:textColor="#989898"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 消息列表 -->
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_bottom"
+        >
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/btn_main"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#e1e1e1"
+        android:text="操作"
+        android:gravity="center"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
