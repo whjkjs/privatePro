@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/build/intermediates/res/merged/release/values/values.xml",
+        "outputFile": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 122
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 2,
@@ -30,7 +30,7 @@
                     "endOffset": 183
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 2,
@@ -49,7 +49,7 @@
                     "endOffset": 247
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 2,
@@ -68,7 +68,7 @@
                     "endOffset": 312
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 2,
@@ -87,7 +87,7 @@
                     "endOffset": 377
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 2,
@@ -106,7 +106,7 @@
                     "endOffset": 431
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 2,
@@ -125,7 +125,7 @@
                     "endOffset": 485
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 2,
@@ -144,7 +144,7 @@
                     "endOffset": 539
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 2,
@@ -163,7 +163,7 @@
                     "endOffset": 598
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 2,
@@ -182,7 +182,7 @@
                     "endOffset": 656
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_colors.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 2,
@@ -201,7 +201,7 @@
                     "endOffset": 1280
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 2,
@@ -220,7 +220,7 @@
                     "endOffset": 1328
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 2,
@@ -239,7 +239,7 @@
                     "endOffset": 1370
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 2,
@@ -258,7 +258,7 @@
                     "endOffset": 1419
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 2,
@@ -277,7 +277,7 @@
                     "endOffset": 1471
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 2,
@@ -296,7 +296,7 @@
                     "endOffset": 1529
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 2,
@@ -315,7 +315,7 @@
                     "endOffset": 1583
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_ids.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 2,
@@ -334,7 +334,7 @@
                     "endOffset": 1642
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res-orig/values/zxing_strings.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res-orig/values/zxing_strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 2,
@@ -353,7 +353,7 @@
                     "endOffset": 1689
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res-orig/values/zxing_strings.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res-orig/values/zxing_strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 2,
@@ -372,7 +372,7 @@
                     "endOffset": 1833
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res-orig/values/zxing_strings.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res-orig/values/zxing_strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 2,
@@ -391,7 +391,7 @@
                     "endOffset": 1946
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res-orig/values/zxing_strings.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res-orig/values/zxing_strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 2,
@@ -411,7 +411,7 @@
                     "endOffset": 2046
                 },
                 "from": {
-                    "file": "/huangkuncan/android_pro/yun/code/iPeerCloud/zxing-android-embedded/res/values/zxing_themes.xml",
+                    "file": "/huangkuncan/android_pro/yun/private/iPeerCloud/zxing-android-embedded/res/values/zxing_themes.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 2,

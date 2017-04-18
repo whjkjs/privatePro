@@ -3,7 +3,7 @@ package com.ipeercloud.com;
 import android.app.Activity;
 import android.app.Application;
 
-import com.ipeercloud.com.utils.CrashHandler;
+import com.bugtags.library.Bugtags;
 
 import java.util.Stack;
 
@@ -18,10 +18,11 @@ public class IpeerCloudApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Bugtags.start("608175721b1fef21d3bff2d9b032c909", this, Bugtags.BTGInvocationEventBubble);
         instance = this;
         // 初始化异常处理类
-        CrashHandler crashHandler = CrashHandler.getInstance();
-        crashHandler.init(this);
+//        CrashHandler crashHandler = CrashHandler.getInstance();
+//        crashHandler.init(this);
     }
 
     /**

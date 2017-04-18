@@ -1,13 +1,10 @@
 package com.ipeercloud.com.view.activity;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.view.MotionEvent;
 
+import com.bugtags.library.Bugtags;
 import com.ipeercloud.com.IpeerCloudApplication;
 import com.ipeercloud.com.R;
 import com.ipeercloud.com.widget.LoadingDialog;
@@ -22,7 +19,23 @@ public class BaseAcitivity extends FragmentActivity {
         setContentView(R.layout.activity_login);
         IpeerCloudApplication.getInstance().addActivity(this);
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Bugtags.onResume(this);
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Bugtags.onPause(this);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        Bugtags.onDispatchTouchEvent(this, event);
+        return super.dispatchTouchEvent(event);
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();

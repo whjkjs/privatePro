@@ -9,7 +9,7 @@ dependencies {
 //    provided 'com.android.support:support-v4:22.0.0'
 //    compile files('librarybs/android-support-v4.jar')
     compile 'com.android.support:support-v4:+'
-    compile files('library/libs/android-support-v4.jar')
+//    compile files('library/libs/android-support-v4.jar')
 }
 
 
@@ -19,7 +19,7 @@ android {
 //    buildToolsVersion project.androidBuildTools
 
     compileSdkVersion 22
-    buildToolsVersion "23.0.3"
+    buildToolsVersion "25.0.2"
 
     sourceSets {
         main {

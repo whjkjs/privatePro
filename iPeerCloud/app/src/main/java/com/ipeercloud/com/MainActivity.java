@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -12,8 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
 import com.ipeercloud.com.utils.UI;
 import com.ipeercloud.com.view.activity.BaseAcitivity;
 import com.lidroid.xutils.ViewUtils;
@@ -24,9 +21,6 @@ import com.ipeercloud.com.view.fragment.HomeFragment;
 import com.ipeercloud.com.view.fragment.MediasFragment;
 import com.ipeercloud.com.view.fragment.PhotosFragment;
 import com.ipeercloud.com.view.fragment.SettingsFragment;
-
-import java.io.File;
-import java.io.IOException;
 
 public class MainActivity extends BaseAcitivity {
 
@@ -71,13 +65,13 @@ public class MainActivity extends BaseAcitivity {
         setContentView(R.layout.activity_main);
         ViewUtils.inject(this);
         initView();
-        initFragement();
+        initFragment();
 //        helloGoonas();
         String callString = helloGoonas();
         Log.e("返回了", "返回的字串：" + callString);
     }
 
-    private void initFragement() {
+    private void initFragment() {
         homeFragment = new HomeFragment();
         photosFragment = new PhotosFragment();
         mediasFragment = new MediasFragment();
