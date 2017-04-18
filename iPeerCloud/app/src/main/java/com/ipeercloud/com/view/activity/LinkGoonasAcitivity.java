@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.ipeercloud.com.MainActivity;
 import com.ipeercloud.com.R;
+import com.ipeercloud.com.controler.GsSocketManager;
 import com.ipeercloud.com.zxing.ToolbarCaptureActivity;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
@@ -60,7 +60,7 @@ public class LinkGoonasAcitivity extends BaseAcitivity {
             @Override
             public void run() {
                 super.run();
-                boolean islink = MainActivity.gsLinked();
+                boolean islink = GsSocketManager.getInstance().gsLinked();
                 Map<String, Object> map = new HashMap();
                 map.put("islink", islink);
 //                map.put("emailStr", emailStr);
@@ -154,7 +154,7 @@ public class LinkGoonasAcitivity extends BaseAcitivity {
                     @Override
                     public void run() {
                         super.run();
-                        boolean linkcloud = MainActivity.gsLinkCloudServer(subString);
+                        boolean linkcloud = GsSocketManager.getInstance().gsLinkCloudServer(subString);
                         Message message = new Message();
 
                         Map<String, Object> map = new HashMap();

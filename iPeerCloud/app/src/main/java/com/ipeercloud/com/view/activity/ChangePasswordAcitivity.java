@@ -10,8 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ipeercloud.com.IpeerCloudApplication;
-import com.ipeercloud.com.MainActivity;
 import com.ipeercloud.com.R;
+import com.ipeercloud.com.controler.GsSocketManager;
 import com.ipeercloud.com.utils.Contants;
 import com.ipeercloud.com.utils.SharedPreferencesHelper;
 import com.lidroid.xutils.ViewUtils;
@@ -67,7 +67,7 @@ public class ChangePasswordAcitivity extends BaseAcitivity {
 
                         String username = SharedPreferencesHelper.getInstance(IpeerCloudApplication.getInstance()).getString(Contants.SP_USERNAME, "");
 
-                        boolean change = MainActivity.gsChangePassword(username, oldpswStr, newpswStr);
+                        boolean change = GsSocketManager.getInstance().gsChangePassword(username, oldpswStr, newpswStr);
                         Message message = new Message();
 
                         Map<String, Object> map = new HashMap();

@@ -10,8 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ipeercloud.com.MainActivity;
 import com.ipeercloud.com.R;
+import com.ipeercloud.com.controler.GsSocketManager;
 import com.ipeercloud.com.utils.GsConfig;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
@@ -63,7 +63,7 @@ public class SignUpAcitivity extends BaseAcitivity {
                     @Override
                     public void run() {
                         super.run();
-                        boolean register = MainActivity.gsUserRegister(GsConfig.serverip, emailStr, passwordStr);
+                        boolean register = GsSocketManager.getInstance().gsUserRegister(GsConfig.serverip, emailStr, passwordStr);
                         Message message = new Message();
 
                         Map<String, Object> map = new HashMap();

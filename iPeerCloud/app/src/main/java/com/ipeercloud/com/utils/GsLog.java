@@ -12,16 +12,16 @@ public class GsLog {
     private static final String TAG = "GsLog";
 
     public static void e(String s) {
-        Log.e(TAG, "e: ");
+        Log.e(TAG, s);
     }
 
     public static void d(String s) {
         if (GsConfig.isDebug) {
-            Log.d(TAG, "d: ");
+            Log.d(TAG, s);
         }
     }
 
     public static void i(String s) {
-        Log.i(TAG, "i: ");
+        Log.i(TAG, s);
     }
 }

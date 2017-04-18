@@ -21,6 +21,9 @@ public class IpeerCloudApplication extends Application {
         System.loadLibrary("gproxy");
         System.loadLibrary("gsCloudServer");
     }
+    static {
+        System.loadLibrary("gsCloudServer");
+    }
     @Override
     public void onCreate() {
         super.onCreate();

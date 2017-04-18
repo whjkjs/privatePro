@@ -30,6 +30,7 @@ public class AccountAcitivity extends BaseAcitivity {
             public void onClick(View view) {
                 Intent intent = new Intent(AccountAcitivity.this, SignUpAcitivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         tv_login.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +38,7 @@ public class AccountAcitivity extends BaseAcitivity {
             public void onClick(View view) {
                 Intent intent = new Intent(AccountAcitivity.this, LoginAcitivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

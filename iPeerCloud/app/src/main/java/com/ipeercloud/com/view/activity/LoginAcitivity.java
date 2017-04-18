@@ -15,8 +15,9 @@ import android.widget.Toast;
 import com.ipeercloud.com.IpeerCloudApplication;
 import com.ipeercloud.com.MainActivity;
 import com.ipeercloud.com.R;
-import com.ipeercloud.com.utils.GsConfig;
+import com.ipeercloud.com.controler.GsSocketManager;
 import com.ipeercloud.com.utils.Contants;
+import com.ipeercloud.com.utils.GsConfig;
 import com.ipeercloud.com.utils.SharedPreferencesHelper;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
@@ -30,8 +31,10 @@ public class LoginAcitivity extends BaseAcitivity {
     TextView btn_login;
     ImageView btn_back;
 
-    @ViewInject(R.id.edit_email)EditText edit_email;                // 邮箱输入
-    @ViewInject(R.id.edit_password)EditText edit_password;          // 密码输入
+    @ViewInject(R.id.edit_email)
+    EditText edit_email;                // 邮箱输入
+    @ViewInject(R.id.edit_password)
+    EditText edit_password;          // 密码输入
 
     private String username = "";
     private String password = "";
@@ -47,10 +50,10 @@ public class LoginAcitivity extends BaseAcitivity {
 
     private void initView() {
         edit_email.setText("2411309415@qq.com");
-        edit_password.setText("1818");
+        edit_password.setText("181818");
 
         Intent intent = getIntent();
-        if (intent!=null && intent.getExtras()!=null) {
+        if (intent != null && intent.getExtras() != null) {
             username = intent.getExtras().getString("username");
             password = intent.getExtras().getString("password");
             edit_email.setText(username);
@@ -76,11 +79,11 @@ public class LoginAcitivity extends BaseAcitivity {
 
                 showLoadingDialog("登录中...");
                 // 登录成功后，第二次登录会失败
-                new Thread(){
+                new Thread() {
                     @Override
                     public void run() {
                         super.run();
-                        boolean isOnline = MainActivity.gsOnline();
+                        boolean isOnline = GsSocketManager.getInstance().gsOnline();
                         Map<String, Object> map = new HashMap();
                         map.put("isOnline", isOnline);
                         map.put("emailStr", emailStr);
@@ -111,14 +114,19 @@ public class LoginAcitivity extends BaseAcitivity {
             }
         });
 
-        String callString = MainActivity.helloGoonas();
+        String callString = GsSocketManager.getInstance().helloGoonas();
         Log.e("返回了", "返回的字串：" + callString);
     }
 
+    private void startMainActivity() {
+        Intent intent = new Intent(LoginAcitivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     private final static int MSG_LOGIN = 111;
     private final static int MSG_ONLINE = 112;
-    private Handler mHandler = new Handler(){
+    private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
@@ -148,11 +156,11 @@ public class LoginAcitivity extends BaseAcitivity {
                         startActivity(intent);
                         finish();
                     } else {
-                        new Thread(){
+                        new Thread() {
                             @Override
                             public void run() {
                                 super.run();
-                                boolean loginback = MainActivity.gsLogin(GsConfig.serverip, emailStr, passwordStr);
+                                boolean loginback = GsSocketManager.getInstance().gsLogin(GsConfig.serverip, emailStr, passwordStr);
                                 Message message = new Message();
                                 message.what = MSG_LOGIN;
                                 message.obj = loginback;

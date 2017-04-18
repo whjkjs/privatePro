@@ -1,26 +1,30 @@
 package com.ipeercloud.com;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentTransaction;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ipeercloud.com.controler.GsJniManager;
+import com.ipeercloud.com.controler.GsSocketManager;
+import com.ipeercloud.com.model.GsCallBack;
+import com.ipeercloud.com.model.GsSimpleResponse;
+import com.ipeercloud.com.utils.GsLog;
 import com.ipeercloud.com.utils.UI;
 import com.ipeercloud.com.view.activity.BaseAcitivity;
-import com.lidroid.xutils.ViewUtils;
-import com.lidroid.xutils.view.annotation.ViewInject;
 import com.ipeercloud.com.view.fragment.BaseFragment;
 import com.ipeercloud.com.view.fragment.FilesFragment;
 import com.ipeercloud.com.view.fragment.HomeFragment;
 import com.ipeercloud.com.view.fragment.MediasFragment;
 import com.ipeercloud.com.view.fragment.PhotosFragment;
 import com.ipeercloud.com.view.fragment.SettingsFragment;
+import com.lidroid.xutils.ViewUtils;
+import com.lidroid.xutils.view.annotation.ViewInject;
 
 public class MainActivity extends BaseAcitivity {
 
@@ -66,8 +70,8 @@ public class MainActivity extends BaseAcitivity {
         ViewUtils.inject(this);
         initView();
         initFragment();
-        String callString = helloGoonas();
-        Log.e("返回了", "返回的字串：" + callString);
+        String callString = GsSocketManager.getInstance().helloGoonas();
+        GsLog.d("返回了返回的字串：" + callString);
     }
 
     private void initFragment() {
@@ -112,8 +116,10 @@ public class MainActivity extends BaseAcitivity {
         switch (view.getId()) {
             case R.id.rl_home:
                 index = 0;
+                goToOnClick();
                 break;
             case R.id.rl_photos:
+                isOnLine();
                 index = 1;
                 break;
             case R.id.rl_medias:
@@ -192,26 +198,47 @@ public class MainActivity extends BaseAcitivity {
     }
 
 
-//    public static native String helloGoonas();
-//    public static native long GProxyInit(String serverip, int serverport, String u, String password);
-
-    public static native String helloGoonas();
-    public static native boolean gsUserRegister(String serverip, String user, String passowrd);
-    public static native boolean gsChangePassword(String user, String oldpassword, String newpassword);
-    public static native boolean gsresetPassword(String serverip, String user);
-    public static native boolean gsLogin(String serverip, String user, String password);
-    public static native boolean gsLinked();
-    public static native boolean gsOnline();
-    public static native boolean gsLinkCloudServer(String CloudServerUuid);
-
-
-
     private void goToOnClick() {
-        boolean login = gsLogin("sz.goonas.com", "2411309415@qq.com", "1818");
-        Log.e("测试", "返回的字串  gsLogin : " + login);
+
+//        boolean login = GsSocketManager.getInstance().gsLogin("sz.goonas.com", "2411309415@qq.com", "1818");
+//        GsLog.d("测试 返回的字串  gsLogin : " + login);
 
     }
 
+    private void register() {
+        GsJniManager.getInstance().register("sz.goonas.com", "2411309415@qq.com", "181818", new GsCallBack<GsSimpleResponse>() {
+            @Override
+            public void onResult(GsSimpleResponse response) {
+                GsLog.d("测试 返回的字串  gsUserRegister : " + response.result);
+            }
+        });
+    }
 
+    private void isOnLine(){
+        GsJniManager.getInstance().isOnline(new GsCallBack<GsSimpleResponse>() {
+            @Override
+            public void onResult(GsSimpleResponse response) {
+                GsLog.d("是否在线 "+response.result);
+            }
+        });
+        GsJniManager.getInstance().isLink(new GsCallBack<GsSimpleResponse>() {
+            @Override
+            public void onResult(GsSimpleResponse response) {
+                GsLog.d("是否已经连接 "+response.result);
+            }
+        });
+        GsJniManager.getInstance().getPathFile("\\",new GsCallBack<GsSimpleResponse>() {
+            @Override
+            public void onResult(GsSimpleResponse response) {
+                GsLog.d("是否已经连接 "+response.result);
+            }
+        });
+        GsJniManager.getInstance().getPathFile("/Medias",new GsCallBack<GsSimpleResponse>() {
+            @Override
+            public void onResult(GsSimpleResponse response) {
+                GsLog.d("是否已经连接 "+response.result);
+            }
+        });
 
+    }
 }
